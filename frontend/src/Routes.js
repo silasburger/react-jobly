@@ -11,7 +11,6 @@ import Company from './Company';
 class Routes extends Component {
   render() {
     return (
-      <div>
         <Switch>
           <Route exact path="/" render={() => <Home currUser={this.props.currUser} />} />
           <Route
@@ -49,7 +48,6 @@ class Routes extends Component {
           />
           <Redirect to="/" />
         </Switch>
-      </div>
     );
   }
 }

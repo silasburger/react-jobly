@@ -3,6 +3,7 @@ import Routes from './Routes';
 import jwt from 'jsonwebtoken';
 import NavigationBar from './NavigationBar';
 import JoblyApi from './JoblyApi';
+import './App.css'
 
 class App extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class App extends Component {
       return <h1> Loading..</h1>;
     }
     return (
-      <div>
+      <div className="container">
         <NavigationBar
           currUser={this.state.currUser}
           navlinks={this.props.navlinks}

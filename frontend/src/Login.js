@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import JoblyApi from './JoblyApi';
 import Alert from './Alert';
+import './Login.css';
+import {
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText,
+  Card,
+  CardText,
+  CardBody
+} from 'reactstrap';
 
 class Login extends Component {
   constructor(props) {
@@ -143,43 +155,47 @@ class Login extends Component {
 
     if (this.state.activeForm === 'login') {
       inputs = loginInputs.map(input => (
-        <div>
-          <label htmlFor={input.inputName}>{input.label}</label>
-          <input
+        <FormGroup>
+          <Label htmlFor={input.inputName}>{input.label}</Label>
+          <Input
             type={input.type}
             name={input.inputName}
             value={this.state[input.inputName]}
             id={input.inputName}
             onChange={this.handleChange}
           />
-        </div>
+        </FormGroup>
       ));
     } else {
       inputs = signupInputs.map(input => (
-        <div>
-          <label htmlFor={input.inputName}>{input.label}</label>
-          <input
+        <FormGroup>
+          <Label htmlFor={input.inputName}>{input.label}</Label>
+          <Input
             type={input.type}
             name={input.inputName}
             value={this.state[input.inputName]}
             id={input.inputName}
             onChange={this.handleChange}
           />
-        </div>
+        </FormGroup>
       ));
     }
 
     return (
-      <div>
-        <button onClick={this.changeToLogin}>Login </button>
-        <button onClick={this.changeToSignup}> Signup </button>
-        <form onSubmit={this.handleSubmit}>
-          {inputs}
+      <>
+        <Card className="login-card">
+          <div className="login-buttons">
+            <Button onClick={this.changeToLogin}>Login </Button>
+            <Button onClick={this.changeToSignup}> Signup </Button>
+          </div>
+          <Form onSubmit={this.handleSubmit}>
+            {inputs}
 
-          <button>Submit</button>
-        </form>
-        {this.state.errors.length > 0 ? errorsAlerts : null}
-      </div>
+            <Button>Submit</Button>
+          </Form>
+          {this.state.errors.length > 0 ? errorsAlerts : null}
+        </Card>
+      </>
     );
   }
 }
