@@ -4,6 +4,7 @@ import Search from './Search';
 import JoblyApi from './JoblyApi';
 import {Alert} from 'reactstrap';
 import JobCard from './JobCard';
+import './Jobs.css'
 
 //This renders the job page with job cards
 class Jobs extends Component {
@@ -76,7 +77,7 @@ class Jobs extends Component {
     }
 
     return (
-      <div>
+      <div className='jobs-container'>
         <Search updateCards={this.updateCards} />
         {jobCards}
         {this.state.jobCards.length ? null : <h1>Sorry, no matching jobs</h1>}

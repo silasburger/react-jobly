@@ -185,8 +185,8 @@ class Login extends Component {
     }
 
     return (
-      <>
-        <Card className="w-50 login-card" inverse>
+      <div className='login-container'>
+        <Card className="login-card" inverse>
           {this.state.errors.length > 0 ? errorsAlerts : null}
           <div className="login-buttons">
             {this.state.activeForm === 'login' ? 
@@ -202,7 +202,7 @@ class Login extends Component {
             </Button>
           </Form>
         </Card>
-      </>
+      </div>
     );
   }
 }
