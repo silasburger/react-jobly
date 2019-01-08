@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Alert from './Alert';
+import {Alert} from 'reactstrap';
 import JoblyApi from './JoblyApi';
 
 class Profile extends Component {
@@ -110,7 +110,7 @@ class Profile extends Component {
     ));
 
     let errorsAlerts = this.state.errors.map(error => (
-      <Alert key={error} text={error} type="danger" />
+      <Alert key={error} color="danger">{error}</Alert>
     ));
 
     if(this.state.isLoading) {

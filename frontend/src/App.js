@@ -44,14 +44,14 @@ class App extends Component {
       return <h1> Loading..</h1>;
     }
     return (
-      <div className="container">
+      <>
         <NavigationBar
           currUser={this.state.currUser}
           navlinks={this.props.navlinks}
           handleLogout={this.handleLogout}
         />
         <Routes currUser={this.state.currUser} handleLogin={this.handleLogin} />
-      </div>
+      </>
     );
   }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Search from './Search';
 import CompanyCard from './CompanyCard';
 import JoblyApi from './JoblyApi';
-import Alert from './Alert';
+import {Alert} from 'reactstrap';
 import logoDefaultUrl from './company-logo.png';
 import { Redirect } from 'react-router-dom';
 
@@ -63,8 +63,8 @@ class Companies extends Component {
       />
     ));
 
-    let errorsAlerts = this.state.errors.map(err => (
-      <Alert key={err} text={err} type="danger" />
+    let errorAlerts = this.state.errors.map(err => (
+      <Alert key={err} color="danger">{err}</Alert>
     ));
 
     if(this.state.isLoading) {
@@ -73,7 +73,7 @@ class Companies extends Component {
 
     // if theres stuff in err Array, then return alert
     if (this.state.errors.length > 0) {
-      return <div>{errorsAlerts}</div>;
+      return <div>{errorAlerts}</div>;
     }
 
     return (

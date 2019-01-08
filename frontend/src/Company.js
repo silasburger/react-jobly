@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import JoblyApi from './JoblyApi';
 import JobCard from './JobCard';
-import Alert from './Alert';
+import {Alert} from 'reactstrap';
 
 class Company extends Component {
   constructor(props) {
@@ -66,7 +66,9 @@ class Company extends Component {
     });
 
     let errorsAlerts = this.state.errors.map(err => (
-      <Alert key={err} text={err} type="danger" />
+      <Alert key={err} color="danger">
+        {err}
+      </Alert> 
     ));
 
     // if theres stuff in err Array, then return alert

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import Search from './Search';
 import JoblyApi from './JoblyApi';
-import Alert from './Alert';
+import {Alert} from 'reactstrap';
 import JobCard from './JobCard';
 
 //This renders the job page with job cards
@@ -67,7 +67,7 @@ class Jobs extends Component {
       />
     ));
     let errorsAlerts = this.state.errors.map(err => (
-      <Alert key={err} text={err} type="danger" />
+      <Alert key={err} color="danger">{err}</Alert>
     ));
 
     // if theres stuff in err Array, then return alert

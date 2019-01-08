@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import JoblyApi from './JoblyApi';
-import Alert from './Alert';
 import './Login.css';
 import {
   Button,
@@ -12,7 +11,8 @@ import {
   Card,
   CardText,
   CardBody,
-  Col
+  Col,
+  Alert
 } from 'reactstrap';
 
 class Login extends Component {
@@ -94,14 +94,14 @@ class Login extends Component {
     } catch (err) {
       // set State this.state.errors = with new error
       this.setState(st => ({
-        errors: [err]
+        errors: err
       }));
     }
   }
 
   render() {
     let errorsAlerts = this.state.errors.map(err => (
-      <Alert key={err} text={err} type="danger" />
+      <Alert className="m-0" color="danger" key={err}>{err}</Alert>
     ));
 
     let loginInputs = [
@@ -186,21 +186,21 @@ class Login extends Component {
 
     return (
       <>
-        <Card className="w-50 m-auto login-card" inverse color="dark">
+        <Card className="w-50 login-card" inverse>
+          {this.state.errors.length > 0 ? errorsAlerts : null}
           <div className="login-buttons">
             {this.state.activeForm === 'login' ? 
             <Button onClick={this.changeToSignup} color="success">Signup</Button> :
             <Button onClick={this.changeToLogin} color="success">Login</Button> 
           }
           </div>
-          <Form onSubmit={this.handleSubmit}>
+          <Form onSubmit={this.handleSubmit} className="m-4">
             {inputs}
 
             <Button className="col-12 text-center" color="primary">
               Submit
             </Button>
           </Form>
-          {this.state.errors.length > 0 ? errorsAlerts : null}
         </Card>
       </>
     );

@@ -1,9 +1,10 @@
 .login-card {
   position: absolute;
-  /* top: 30%; */
+  top: 20%;
   left: 50%;
   transform: translate(-50%);
-  margin-top: 60px;
+  margin: 60px 0 60px 0;
+  background-color: #4285F4;
 }
 
 .login-buttons {

@@ -1,7 +1,16 @@
 a.active {
-  color: #00b564;
+  color: #999;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .nav-item {
   padding: 10px;
+}
+
+nav {
+  background-color: #333;
+  height: 20px;
 }
