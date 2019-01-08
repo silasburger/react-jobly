@@ -11,7 +11,8 @@ import {
   FormText,
   Card,
   CardText,
-  CardBody
+  CardBody,
+  Col
 } from 'reactstrap';
 
 class Login extends Component {
@@ -155,7 +156,7 @@ class Login extends Component {
 
     if (this.state.activeForm === 'login') {
       inputs = loginInputs.map(input => (
-        <FormGroup>
+        <FormGroup> 
           <Label htmlFor={input.inputName}>{input.label}</Label>
           <Input
             type={input.type}
@@ -163,13 +164,15 @@ class Login extends Component {
             value={this.state[input.inputName]}
             id={input.inputName}
             onChange={this.handleChange}
-          />
+            />
         </FormGroup>
       ));
     } else {
       inputs = signupInputs.map(input => (
         <FormGroup>
-          <Label htmlFor={input.inputName}>{input.label}</Label>
+          <Label htmlFor={input.inputName}>
+            {input.label}
+          </Label>
           <Input
             type={input.type}
             name={input.inputName}
@@ -183,15 +186,19 @@ class Login extends Component {
 
     return (
       <>
-        <Card className="login-card">
+        <Card className="w-50 m-auto login-card" inverse color="dark">
           <div className="login-buttons">
-            <Button onClick={this.changeToLogin}>Login </Button>
-            <Button onClick={this.changeToSignup}> Signup </Button>
+            {this.state.activeForm === 'login' ? 
+            <Button onClick={this.changeToSignup} color="success">Signup</Button> :
+            <Button onClick={this.changeToLogin} color="success">Login</Button> 
+          }
           </div>
           <Form onSubmit={this.handleSubmit}>
             {inputs}
 
-            <Button>Submit</Button>
+            <Button className="col-12 text-center" color="primary">
+              Submit
+            </Button>
           </Form>
           {this.state.errors.length > 0 ? errorsAlerts : null}
         </Card>
