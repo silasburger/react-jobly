@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {Alert} from 'reactstrap';
+import {Alert, Form, FormGroup, Button, Label, Input} from 'reactstrap';
 import JoblyApi from './JoblyApi';
+import './Profile.css'
 
 class Profile extends Component {
   constructor(props) {
@@ -97,16 +98,16 @@ class Profile extends Component {
     ];
 
     let inputElements = profileInputs.map(input => (
-      <div key={input.inputName}>
-        <label htmlFor={input.inputName}>{input.label}</label>
-        <input
+      <FormGroup key={input.inputName}>
+        <Label htmlFor={input.inputName}>{input.label}</Label>
+        <Input
           type={input.type}
           name={input.inputName}
           id={input.inputName}
           onChange={this.handleChange}
           value={input.value}
         />
-      </div>
+      </FormGroup>
     ));
 
     let errorsAlerts = this.state.errors.map(error => (
@@ -118,15 +119,17 @@ class Profile extends Component {
     }
 
     return (
-      <div>
-        <div>Username: {this.props.currUser.username}</div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="profile-container">
+      <div className='profile-form-container'>
+        <div className='user-name'>Username: {this.props.currUser.username}</div>
+        <Form onSubmit={this.handleSubmit}>
           {inputElements}
 
-          <button>Submit</button>
-        </form>
+          <Button className="col-12 text-center" color="primary">Submit</Button>
+        </Form>
         {this.state.errors.length > 0 ? errorsAlerts : null}
         {this.state.updateSuccessful ? <Alert key='updateSuccessful' text='Profile Updated' type='success' /> : null}
+      </div>
       </div>
     );
   }

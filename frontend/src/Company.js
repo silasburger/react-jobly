@@ -81,7 +81,9 @@ class Company extends Component {
       <div className="company-container">
         <h1>{this.state.company.name}</h1>
         <p>{this.state.company.description}</p>
+        <div className="company-jobs-container">
         {jobCards}
+        </div>
       </div>
     );
   }

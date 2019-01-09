@@ -30,8 +30,8 @@ class NavigationBar extends Component {
     });
 
     return (
-      <Navbar className="navbar">
-        <NavbarBrand href="/" className="m-5">Jobly</NavbarBrand>
+      <Navbar className="navbar navbar-expand">
+        <NavbarBrand href="/">Jobly</NavbarBrand>
         <Nav className='mr-auto'>{navLinkComponents}</Nav>
       </Navbar>
     );
