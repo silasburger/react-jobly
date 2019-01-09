@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import Search from './Search';
 import JoblyApi from './JoblyApi';
-import {Alert} from 'reactstrap';
+import { Alert } from 'reactstrap';
 import JobCard from './JobCard';
-import './Jobs.css'
+import './Jobs.css';
 
 //This renders the job page with job cards
 class Jobs extends Component {
@@ -13,7 +13,7 @@ class Jobs extends Component {
 
     this.state = {
       jobCards: [],
-      errors: [], 
+      errors: [],
       isLoading: true
     };
     this.updateCards = this.updateCards.bind(this);
@@ -48,8 +48,8 @@ class Jobs extends Component {
   }
 
   render() {
-    if(this.state.isLoading) {
-      return (<h1>Loading...</ h1>)
+    if (this.state.isLoading) {
+      return <h1>Loading...</h1>;
     }
 
     if (this.props.currUser === null) {
@@ -68,7 +68,9 @@ class Jobs extends Component {
       />
     ));
     let errorsAlerts = this.state.errors.map(err => (
-      <Alert key={err} color="danger">{err}</Alert>
+      <Alert key={err} color="danger">
+        {err}
+      </Alert>
     ));
 
     // if theres stuff in err Array, then return alert
@@ -77,9 +79,9 @@ class Jobs extends Component {
     }
 
     return (
-      <div className='jobs-container'>
+      <div className="jobs-container">
         <Search updateCards={this.updateCards} />
-        {jobCards}
+        <div className="cards-container">{jobCards}</div>
         {this.state.jobCards.length ? null : <h1>Sorry, no matching jobs</h1>}
       </div>
     );

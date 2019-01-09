@@ -37,7 +37,7 @@ class JobCard extends Component {
         {this.state.applied ? (
           <div>Application Received</div>
         ) : (
-          <button onClick={this.handleApplication}> Apply</button>
+          <Button onClick={this.handleApplication}>Apply</Button>
         )}
       </Card>
     );

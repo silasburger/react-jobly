@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import JoblyApi from './JoblyApi';
 import JobCard from './JobCard';
 import {Alert} from 'reactstrap';
+import './Company.css';
 
 class Company extends Component {
   constructor(props) {
@@ -77,7 +78,7 @@ class Company extends Component {
     }
 
     return (
-      <div>
+      <div className="company-container">
         <h1>{this.state.company.name}</h1>
         <p>{this.state.company.description}</p>
         {jobCards}

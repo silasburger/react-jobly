@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Form, Button, Input} from 'reactstrap';
 
 class Search extends Component {
   constructor(props) {
@@ -24,18 +25,16 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
+        <Form onSubmit={this.handleSubmit} inline className='m-4'>
+          <Input
             type="text"
             name="search"
             value={this.state.search}
             id="search"
             onChange={this.handleChange}
           />
-          <button>Search</button>
-        </form>
-      </div>
+          <Button>Search</Button>
+        </Form>
     );
   }
 }

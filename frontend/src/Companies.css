@@ -1,4 +1,4 @@
-.jobs-container {
+.companies-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,17 +8,10 @@
   background-attachment: fixed;
 }
 
-.jobs-container .card {
+.companies-container .card {
   padding: 20px;
   text-align: center;
-  width: 20rem;
-  min-width: 50px;
+  width: 50rem;
+  min-width: 40px;
   margin: 20px;
-}
-
-.cards-container {
-  flex-wrap: wrap;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
 }

@@ -5,6 +5,7 @@ import JoblyApi from './JoblyApi';
 import {Alert} from 'reactstrap';
 import logoDefaultUrl from './company-logo.png';
 import { Redirect } from 'react-router-dom';
+import './Companies.css';
 
 // Comonent renders company page which shows a list of CompanyCards
 class Companies extends Component {
@@ -77,8 +78,7 @@ class Companies extends Component {
     }
 
     return (
-      <div>
-        Hello. Welcome to Companies, Silos.
+      <div className='companies-container'>
         <Search updateCards={this.updateCards} />
         {companyCards}
         {this.state.companyCards.length ? null : <h1>Sorry, no matching companies</h1>}
