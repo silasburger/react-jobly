@@ -71,7 +71,7 @@ npm start
 ## Team
 
 | **Vivek Sainanee**
-| <a href="https://github.com/viveksainanee" target="_blank">`github.com/viveksainanee"`</a> |  
+| <a href="https://github.com/viveksainanee" target="_blank">`github.com/viveksainanee`</a> |  
 | **Zac Bennett**
 | <a href="https://github.com/zacbennett" target="_blank">`github.com/zacbennett`</a> | 
 
