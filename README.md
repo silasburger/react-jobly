@@ -70,9 +70,9 @@ npm start
 
 ## Team
 
-| <a href="https://github.com/silasburger" target="_blank">**Vivek Sainanee**</a>
-| <a href="https://github.com/viveksainanee" target="_blank">`github.com/hineshamin`</a> |  
-| <a href="https://github.com/silasburger" target="_blank">**Zac Bennett**</a>
+| **Vivek Sainanee**
+| <a href="https://github.com/viveksainanee" target="_blank">`github.com/viveksainanee"`</a> |  
+| **Zac Bennett**
 | <a href="https://github.com/zacbennett" target="_blank">`github.com/zacbennett`</a> | 
 
 
