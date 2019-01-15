@@ -2,12 +2,14 @@ App deployed at : <a href="https://joblyyy-front.herokuapp.com/">https://joblyyy
 
 # Jobly - Job Search App
 
-My team (see team section) built the frontend for this app using React (CRA setup), Redux, and Redux Thunk. The goal was to create an app that has a fundamentally sound component heirarchy. Another goal was to intelligently connect components to redux to prop drilling.
+My team (see team section) and I built the frontend and backend for this app. The basic user requirements are that users should be able to sign up, look at jobs, apply for jobs, and login if they leave the site. The search feature allows users to easily find companies or jobs.
 
+ 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Features](#features)
+- [Technologies](#technologies)
 - [Team](#team)
 
 ## Installation
@@ -23,26 +25,24 @@ node server.js
 ###Frontend Setup:
 
 ```shell
-cd front
+cd frontend
 npm install
 npm start
 ```
 
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/silasburger/microblog`
+- Clone this repo to your local machine from this url `https://github.com/silasburger/microblog`
 
 ---
 
 ## Features
 
-- Users can write a blog post
-- Users can edit a blog post
-- Users can delete a blog post
-- Users can read a blog post
-- Users can vote on blog posts
-- Users can comment on blog posts
-- Users can delete their comments on blog posts
+- Users can signup
+- Users can login 
+- Users can search for jobs or companies
+- Users can edit their profile
+- Users can apply for jobs
 
 ---
 
@@ -50,23 +50,28 @@ npm start
 
 - React
 - Create-React-App
-- Redux 
-- Redux Thunk
 - Axios 
 - Bootstrap
 - Reactstrap
+- Node/Express
+- PostgreSQL
 
 --- 
 
 ## Features to add
 
-- Add auth to backend for signup/login functionality
+- Allow users to view jobs they've applied.
+- Add debounce function to search
+- Add pagination
+- Allow users to unapply to jobs
 
 ---
 
 ## Team
 
-| <a href="https://github.com/silasburger" target="_blank">**Hinesh Amin**</a>
-| <a href="https://github.com/silasburger" target="_blank">`github.com/hineshamin`</a> | 
+| <a href="https://github.com/silasburger" target="_blank">**Vivek Sainanee**</a>
+| <a href="https://github.com/viveksainanee" target="_blank">`github.com/hineshamin`</a> |  
+| <a href="https://github.com/silasburger" target="_blank">**Zac Bennett**</a>
+| <a href="https://github.com/zacbennett" target="_blank">`github.com/zacbennett`</a> | 
 
 
