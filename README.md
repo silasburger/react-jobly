@@ -10,7 +10,7 @@ My team (see team section) and I built the frontend and backend for this app. Th
 - [Installation](#installation)
 - [Features](#features)
 - [Technologies](#technologies)
-- [Features to add](#features to add)
+- [Features to add](#features-to-add)
 - [Team](#team)
 
 ## Installation
