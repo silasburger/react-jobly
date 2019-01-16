@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Jumbotron } from 'reactstrap';
+import { Button, Jumbotron, Media } from 'reactstrap';
 import './Home.css';
 import photo from './50958.svg';
 
@@ -19,10 +19,10 @@ class Home extends Component {
     }
     return (
       <div className="home-container">
-        <Jumbotron className="m-5">
-          <img id="home-banner" src={photo} alt="workers" />
+        <Jumbotron className="">
+          <h3>Welcome to Jobly!</h3>
           <Link to="/login">
-            <Button color="success">Get Started</Button>
+            <Button className="mt-5" color="success">Get Started</Button>
           </Link>
         </Jumbotron>
       </div>
